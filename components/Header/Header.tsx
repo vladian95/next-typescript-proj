@@ -1,8 +1,9 @@
 import { Link } from 'react-scroll';
 import Logo from '../Logo/Logo';
-import styles from '../../styles/header.module.scss';
 import { useMediaQuery } from '@/hooks';
 import { useState } from 'react';
+import styles from '../../styles/header.module.scss';
+import stylesMenu from '../../styles/mobileMenu.module.scss';
 
 const Header = () => {
   const isMobile = useMediaQuery(640);
@@ -11,6 +12,9 @@ const Header = () => {
   const smooth = true;
   const offset = 140;
   const duration = 500;
+  const currentMenuItemClass = isMobile
+    ? stylesMenu.menu__item
+    : styles.header__nav__list__item;
 
   const handleToggleMenu = () => {
     (document.querySelector('body') as HTMLBodyElement).classList.toggle(
@@ -40,9 +44,17 @@ const Header = () => {
             <span />
           </button>
         )}
-        <nav className={styles.header__nav}>
-          <ul className={styles.header__nav__list}>
-            <li className={styles.header__nav__list__item}>
+        <nav
+          className={`${isMobile ? stylesMenu.menu : styles.header__nav} ${
+            menuOpen ? stylesMenu.open : ''
+          }`}
+        >
+          <ul
+            className={`${
+              isMobile ? styles.list_reset : styles.header__nav__list
+            }`}
+          >
+            <li className={currentMenuItemClass}>
               <Link
                 href="/"
                 to="about"
@@ -55,7 +67,7 @@ const Header = () => {
                 Обо мне
               </Link>
             </li>
-            <li className={styles.header__nav__list__item}>
+            <li className={currentMenuItemClass}>
               <Link
                 href="/"
                 to="about"
@@ -68,7 +80,7 @@ const Header = () => {
                 Навыки
               </Link>
             </li>
-            <li className={styles.header__nav__list__item}>
+            <li className={currentMenuItemClass}>
               <Link
                 href="/"
                 to="about"
@@ -81,7 +93,7 @@ const Header = () => {
                 Портфолио
               </Link>
             </li>
-            <li className={styles.header__nav__list__item}>
+            <li className={currentMenuItemClass}>
               <Link
                 href="/"
                 to="about"
