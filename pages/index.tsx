@@ -1,11 +1,14 @@
 import Header from '@/components/Header/Header';
+import Hero from '@/components/Hero';
 import styles from '@/styles/Home.module.css';
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main></main>
+      <main>
+        <Hero />
+      </main>
       <div className={styles.container}>
         <div className="background-animation">
           <div id="ball-one"></div>
