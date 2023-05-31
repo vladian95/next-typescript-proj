@@ -6,6 +6,9 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  @media all and (max-width: 768px) {
+    height: auto;
+  }
 }
 
 .hero__title {
@@ -22,6 +25,12 @@
     0 0 40px hsl(var(--hue), 80%, 70%, 0.9),
     0 0 60px hsl(var(--hue), 90%, 60%, 0.95),
     0 0 80px hsl(var(--hue), 100%, 50%, 1);
+  @media all and (max-width: 768px) {
+    font-size: 5em;
+  }
+  @media all and (max-width: 600px) {
+    font-size: 40px;
+  }
 }
 
 .hero__description {
@@ -29,9 +38,12 @@
   font-weight: 500;
   font-size: 22px;
   color: #f3f3f3;
-  width: 555px;
+  max-width: 555px;
   margin: 89px 0px 68px;
   line-height: 30px;
+  @media all and (max-width: 600px) {
+    font-size: 18px;
+  }
 }
 
 .hero__btn {
@@ -54,6 +66,11 @@
       #6352b1 43.75%,
       #8b0eb7 68.75%
     );
+  }
+  @media all and (max-width: 428px) {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
   }
 }
 
