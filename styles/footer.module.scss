@@ -8,6 +8,9 @@
   padding: 23px 0px 67px;
   display: flex;
   justify-content: space-between;
+  @media all and (max-width: 980px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .footer__logo {
@@ -20,6 +23,9 @@
   height: 40px;
   width: 85px;
   margin-bottom: 48px;
+  @media all and (max-width: 980px) {
+    margin: 19px 0px 19px;
+  }
 }
 
 .footer__logo__name {
@@ -39,18 +45,28 @@
   &__social {
     display: flex;
     align-items: center;
+    @media all and (max-width: 980px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &__title {
       margin-right: 48px;
       font-family: 'Montserrat';
       font-weight: 400;
       font-size: 18px;
       color: #f2f2f2;
+      @media all and (max-width: 980px) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
 
 .footer__info__Links {
   display: flex;
+  @media all and (max-width: 980px) {
+    flex-direction: column;
+  }
   .footer__info__Links__wrap {
     display: flex;
     flex-direction: column;
@@ -63,6 +79,9 @@
     }
     a:first-child {
       margin-bottom: 19px;
+      @media all and (max-width: 980px) {
+        margin-top: 19px;
+      }
     }
   }
 }
