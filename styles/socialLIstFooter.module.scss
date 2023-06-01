@@ -1,0 +1,22 @@
+.footer__social__list {
+  list-style: none;
+  display: flex;
+}
+
+.footer__social__list__item {
+  margin-right: 40px;
+}
+
+.footer__social__list__item__link {
+  display: flex;
+  align-items: center;
+}
+
+.footer__social__list__item__link__text {
+  margin-right: 16px;
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration-line: underline;
+  color: #bdbdbd;
+}
