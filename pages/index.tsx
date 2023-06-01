@@ -1,4 +1,5 @@
 import About from '@/components/About/About';
+import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import Hero from '@/components/Hero';
 import styles from '@/styles/Home.module.css';
@@ -10,6 +11,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Footer />
       </main>
       <div className={styles.container}>
         <div className="background-animation">
