@@ -5,12 +5,22 @@
   &__sub_container {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     padding-top: 56px;
+    @media all and (max-width: 768px) {
+      flex-direction: column;
+      padding-top: 6px;
+    }
   }
 
   &__img {
     margin-right: 32px;
     width: 48.6%;
+
+    @media all and (max-width: 768px) {
+      width: 70%;
+      margin: 0 auto;
+    }
   }
 
   &__title {
@@ -20,6 +30,9 @@
     font-weight: 600;
     font-size: 36px;
     color: #f2f2f2;
+    @media all and (max-width: 768px) {
+      margin-top: 30px;
+    }
 
     &__border {
       padding-top: 17px;
@@ -54,5 +67,8 @@
     font-size: 20px;
     line-height: 27px;
     color: #f2f2f2;
+    @media all and (max-width: 768px) {
+      max-width: 100%;
+    }
   }
 }

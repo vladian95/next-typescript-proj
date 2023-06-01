@@ -5,6 +5,9 @@
   font-family: Raleway;
   font-size: 48px;
   color: #06caf9;
+  @media all and (max-width: 768px) {
+    font-size: 2rem;
+  }
   &__border {
     margin-top: 16px;
     display: block;
