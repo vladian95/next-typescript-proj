@@ -1,6 +1,7 @@
-import styles from '../../styles/about.module.scss';
 import ArrowSvg from '../ArrowSvg/ArrowSvg';
 import MainTitle from '../MainTitle/MainTitle';
+import SocialList from './SocialList';
+import styles from '../../styles/about.module.scss';
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
         <img className={styles.about__img} src="/img/avatar.png" alt="avatar" />
         <div className={styles.about__inner}>
           <h3 className={styles.about__title}>
+            Иван Иванов
             <span className={styles.about__title__border}>
               <span className={styles.about__title__border__arrow}>
                 <ArrowSvg />
@@ -25,6 +27,7 @@ const About = () => {
             Coolor, расположенного в Лас-Вегасе.Я ищу, чтобы взять на себя
             больше работы и повысить свои навыки в качестве веб-разработчика.
           </p>
+          <SocialList />
         </div>
       </div>
     </section>

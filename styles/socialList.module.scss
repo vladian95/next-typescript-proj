@@ -1,0 +1,16 @@
+.social__list {
+  list-style: none;
+
+  &__item__link {
+    display: flex;
+    align-items: center;
+    &__text {
+      margin-right: 24px;
+      font-family: 'Lato';
+      font-weight: 600;
+      font-size: 20px;
+      text-decoration-line: underline;
+      color: #0caed5;
+    }
+  }
+}
