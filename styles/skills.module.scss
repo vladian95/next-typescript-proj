@@ -1,0 +1,36 @@
+.skills {
+  padding-top: 70px;
+  padding-bottom: 50px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 32px;
+    grid-row-gap: 105px;
+    list-style: none;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 38px;
+    padding-top: 10px;
+    background-repeat: no-repeat;
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 22px;
+    color: #f2f2f2;
+
+    &__border {
+      max-width: 248px;
+      margin-top: 17px;
+      display: block;
+      height: 2px;
+      background: linear-gradient(
+        89.99deg,
+        #00d1ff 0%,
+        rgba(255, 34, 141, 0) 100%
+      );
+    }
+  }
+}
