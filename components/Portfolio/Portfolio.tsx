@@ -7,7 +7,7 @@ import {
   portfolioItems2,
   portfolioItems3,
   portfolioItems4,
-} from './PortfolioTabContents';
+} from './portfolioTabContents';
 import styles from '../../styles/portfolio.module.scss';
 
 const Portfolio = () => {
