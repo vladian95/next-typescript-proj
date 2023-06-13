@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import MainTitle from '../MainTitle/MainTitle';
 import PortfolioTabControl from './PortfolioTabControl';
+import PortfolioTabContent from './PortfolioTabContent';
+import {
+  portfolioItems1,
+  portfolioItems2,
+  portfolioItems3,
+  portfolioItems4,
+} from './PortfolioTabContents';
 import styles from '../../styles/portfolio.module.scss';
 
 const Portfolio = () => {
@@ -81,6 +88,12 @@ const Portfolio = () => {
             ))}
           </ul>
         </div>
+        <ul className={styles.portfolio__list}>
+          {portfolioTab1 && <PortfolioTabContent tabItems={portfolioItems1} />}
+          {portfolioTab2 && <PortfolioTabContent tabItems={portfolioItems2} />}
+          {portfolioTab3 && <PortfolioTabContent tabItems={portfolioItems3} />}
+          {portfolioTab4 && <PortfolioTabContent tabItems={portfolioItems4} />}
+        </ul>
       </div>
     </section>
   );
