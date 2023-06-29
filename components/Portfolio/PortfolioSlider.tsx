@@ -1,7 +1,18 @@
 import { motion } from 'framer-motion';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import PortfolioSliderItem from './PortfolioSliderItem';
 
-const PortfolioSlider = ({ tabItems }) => {
+interface IPortfolioSlider {
+  tabItems: {
+    id: number;
+    img: string;
+    link: string;
+    title: string;
+  }[];
+}
+
+const PortfolioSlider = ({ tabItems }: IPortfolioSlider) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,7 +24,18 @@ const PortfolioSlider = ({ tabItems }) => {
         showIndicators={false}
         showThumbs={false}
         showStatus={false}
-      ></Carousel>
+        centerMode={true}
+        centerSlidePercentage={45}
+      >
+        {tabItems.map((item) => (
+          <PortfolioSliderItem
+            key={item.id}
+            title={item.title}
+            imgSrc={item.img}
+            link={item.link}
+          />
+        ))}
+      </Carousel>
     </motion.div>
   );
 };

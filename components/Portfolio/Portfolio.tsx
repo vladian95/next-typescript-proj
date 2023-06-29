@@ -12,6 +12,7 @@ import {
   hiddenPortfolioItemsArray,
 } from './portfolioTabContents';
 import styles from '../../styles/portfolio.module.scss';
+import PortfolioSlider from './PortfolioSlider';
 
 const Portfolio = () => {
   const isMobile = useMediaQuery(1080);
@@ -128,6 +129,16 @@ const Portfolio = () => {
           </div>
         )}
       </div>
+      {isMobile && (
+        <div className={styles.portfolio__list__mobile}>
+          <div className={styles.portfolio__list__mobile__container}>
+            {portfolioTab1 && <PortfolioSlider tabItems={portfolioItems1} />}
+            {portfolioTab2 && <PortfolioSlider tabItems={portfolioItems2} />}
+            {portfolioTab3 && <PortfolioSlider tabItems={portfolioItems3} />}
+            {portfolioTab4 && <PortfolioSlider tabItems={portfolioItems4} />}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
