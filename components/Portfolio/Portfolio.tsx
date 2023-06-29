@@ -7,8 +7,10 @@ import {
   portfolioItems2,
   portfolioItems3,
   portfolioItems4,
+  hiddenPortfolioItemsArray,
 } from './portfolioTabContents';
 import styles from '../../styles/portfolio.module.scss';
+import { AnimatePresence } from 'framer-motion';
 
 const Portfolio = () => {
   const [portfolioTab1, setPortfolioTab1] = useState(true);
@@ -93,7 +95,24 @@ const Portfolio = () => {
           {portfolioTab2 && <PortfolioTabContent tabItems={portfolioItems2} />}
           {portfolioTab3 && <PortfolioTabContent tabItems={portfolioItems3} />}
           {portfolioTab4 && <PortfolioTabContent tabItems={portfolioItems4} />}
+          <AnimatePresence>
+            {hiddenPortfolioItems && (
+              <PortfolioTabContent tabItems={hiddenPortfolioItemsArray} />
+            )}
+          </AnimatePresence>
         </ul>
+
+        <div className={styles.portfolio__wrapper}>
+          <button
+            className={styles.portfolio__more}
+            onClick={toggleHiddenPortfolioItems}
+          >
+            <span className={styles.portfolio__more__text}>
+              {hiddenPortfolioItems ? 'Свернуть' : 'Показать еще'}
+            </span>
+            <span className={styles.portfolio__more__border} />
+          </button>
+        </div>
       </div>
     </section>
   );

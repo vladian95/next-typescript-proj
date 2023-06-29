@@ -84,4 +84,40 @@
       }
     }
   }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  &__more {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &__text {
+      font-family: 'Raleway';
+      font-weight: 400;
+      font-size: 20px;
+      color: #b7bfb1;
+
+      &:hover {
+        color: #f2f2f2;
+      }
+    }
+
+    &__border {
+      display: block;
+      margin-top: 16px;
+      height: 2px;
+      background: linear-gradient(
+        89.99deg,
+        #5b5b5b 0%,
+        rgba(91, 91, 91, 0) 100%
+      );
+    }
+  }
 }
