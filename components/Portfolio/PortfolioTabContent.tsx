@@ -13,22 +13,23 @@ interface IPortfolioTabContent {
 
 const PortfolioTabContent = ({ tabItems }: IPortfolioTabContent) => {
   return (
-    <li className={styles.portfolio__list__item}>
+    <>
       {tabItems.map((item) => (
-        <motion.div
+        <motion.li
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           key={item.id}
+          className={styles.portfolio__list__item}
         >
           <PortfolioTabItem
             title={item.title}
             imgSrc={item.img}
             link={item.link}
           />
-        </motion.div>
+        </motion.li>
       ))}
-    </li>
+    </>
   );
 };
 
